@@ -13,8 +13,14 @@ function play(){
 
 function continueGame(){
     const alphabet = getRendomAlphabet();
-    console.log(alphabet);
-}
+    // console.log(alphabet);
+    const curentAlphabet = document.getElementById('curent-alphabet');
+    curentAlphabet.innerText = alphabet;
+
+    // set background color 
+    setBackgroundColorById(alphabet);
+
+} 
 
 function getRendomAlphabet(){
     // get and creat an alphabet array 
@@ -30,4 +36,9 @@ function getRendomAlphabet(){
     const alphabet = alphabets[index];
     // console.log(index,alphabet);
     return alphabet;
+}
+
+function setBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-orange-400');
 }
