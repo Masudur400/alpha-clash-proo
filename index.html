@@ -15,16 +15,16 @@
 <body>
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home screen  -->
-        <section class="home  min-h-screen text-white flex justify-center items-center hidden">
+        <section id="home-screen" class="   min-h-screen text-white flex justify-center items-center  ">
             <div class="flex flex-col items-center gap-9">
                 <h1 class="text-9xl font-anton uppercase">Alpha Clash Pro</h1>
                 <p class="text-2xl font-normal">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class=" bg-white px-10 py-4 text-center text-black rounded-lg text-2xl font-bold">Play
+                <button onclick="play()" class=" bg-white px-10 py-4 text-center text-black rounded-lg text-2xl font-bold ">Play
                     Now</button>
             </div>
         </section>
         <!-- play ground  -->
-        <section class="play-ground hidden">
+        <section id="play-ground" class="  hidden">
             <div class="flex flex-col items-center gap-9 pt-9">
                 <!-- screen  -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313] border-opacity-80 bg-white  bg-opacity-70">
@@ -87,10 +87,19 @@
             </div>
         </section>
         <!-- score  -->
-        <section class="score">
-
+        <section class="score flex justify-center items-center min-h-screen hidden">
+            <div class="text-white bg-white bg-opacity-15 flex flex-col justify-center items-center gap-10 p-10 rounded-2xl">
+                <h1 class="text-8xl">
+                    <span class="font-bold">Score :</span>
+                    <span>0</span>
+                </h1>
+                <button class="btn text-black text-lg">Play Again</button>
+                <p class="text-lg">Practice will make you a Pro</p>
+            </div>
         </section>
     </main>
+
+    <script src="alpha-clash.js"></script>
 </body>
 
 </html>
