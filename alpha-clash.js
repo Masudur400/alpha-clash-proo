@@ -42,3 +42,25 @@ function setBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400');
 }
+
+function hendleKeyBoardByttonPress(event){
+    const playerPressed = event.key;
+    // console.log(playerPressed);
+
+    // get the expected press 
+    const curentAlphabet = document.getElementById('curent-alphabet');
+    const targetAlphabet = curentAlphabet.innerText;
+    const expectAlphabet = targetAlphabet.toLowerCase();
+    console.log(playerPressed, expectAlphabet);
+    // console.log(curentAlphabet.innerText);
+
+    // check match or not 
+    if(playerPressed === expectAlphabet){
+        console.log('you get a point');
+    }
+    else{
+        console.log('you missed. you loss a life');
+    }
+}
+// capture keyBoard key press 
+document.addEventListener('keyup', hendleKeyBoardByttonPress);
